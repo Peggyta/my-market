@@ -1,15 +1,17 @@
 import React from 'react';
+//Functions
+import {shorten} from '../../helper/functions';
 
-const Product = () => {
+const Product = ({productData}) => {
     return (
         <div>
-            <img/>
-            <h3>title</h3>
-            <p>price</p>
+            <img src={productData.image} alt="product" style={{width:"200px"}}/>
+            <h3>{shorten(productData.title)}</h3>
+            <p>{productData.price}</p>
             <div>
-                <a>Details</a>
+                <a href="#">Details</a>
                 <div>
-                    <button>add tp cart</button>
+                    <button>add to cart</button>
                 </div>
             </div>
         </div>
