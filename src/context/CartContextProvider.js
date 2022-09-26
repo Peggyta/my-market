@@ -8,15 +8,15 @@ const initialState = {
 }
 
 const cartReducer = (state, action) => {
-    switch(action.type){
+    switch(action.type) {
         case "ADD_ITEM":
-            if(!state.selectedItems.find(item => item.id === action.payload.id)) {
+            if (!state.selectedItems.find(item => item.id === action.payload.id)) {
                 state.selectedItems.push ({
                     ...action.payload,
                     quantity: 1
                 })
             }
-            return{
+            return {
                 ...state,
                 selectedItems: [...state.selectedItems],
                 checkout: false
@@ -24,10 +24,18 @@ const cartReducer = (state, action) => {
         
         case "REMOVE_ITEM":
             const newSelectedItems = state.selectedItems.filter(item => item.id !== action.payload.id);
-            return{
+            return {
                 ...state,
                 selectedItems: [...newSelectedItems]
             }
+
+        case "INCREASE":
+            const indexI = state.selectedItems.findIndex(item => item.id === action.payload.id);
+            state.selectedItems[indexI].quantity++;
+            return {
+                ...state
+            }
+        
 
     }
 }
