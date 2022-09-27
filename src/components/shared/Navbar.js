@@ -6,10 +6,17 @@ import { CartContext } from '../../context/CartContextProvider';
 import shopIcon from '../../assets/icons/shop.svg';
 
 const Navbar = () => {
+    //only state needed here
     const { state } = useContext(CartContext);
     return (
         <div>
-            <Link to="/products">Products</Link>
+            <div>
+                <Link to="/products">Products</Link>
+                <div>
+                    <Link to="/cart"><img src={shopIcon} alt="shop icon"/></Link>
+                    <span>{state.itemsCounter}</span>
+                </div>
+            </div>
         </div>
     );
 };
