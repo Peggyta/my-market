@@ -11,11 +11,11 @@ const ProductDetails = () => {
     const {image, title, description, price, category} = product;
     return (
         <div>
-            <img src={image} alt="product"/>
+            <img src={image} alt="product" style={{width:"200px"}}/>
             <div>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <p><span>Category:</span>{category}</p>
+                <p><span>Category: </span>{category}</p>
                 <div>
                     <span>{price} $</span>
                     <Link to="/products">Back to shop</Link>
