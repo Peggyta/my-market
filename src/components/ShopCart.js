@@ -13,7 +13,7 @@ const ShopCart = () => {
                 {state.selectedItems.map(item => <Cart key = {item.id} data = {item} />)}
            </div>
            {
-                state.checkout > 0 && 
+                state.itemsCounter > 0 && 
                 <div>
                     <p><span>Total Items:</span>{state.itemsCounter}</p>
                     <p><span>Total Payments:</span>{state.total} $</p>
@@ -25,7 +25,19 @@ const ShopCart = () => {
            }
 
            {
-            
+                state.checkout && 
+                    <div>
+                        <h3>Checked out successfully!</h3>
+                        <Link to = "/products">Buy more</Link>
+                    </div>
+           }
+
+           {
+                !state.checkout && state.itemsCounter === 0 && 
+                    <div>
+                        <h3>Want to buy?</h3>
+                        <Link to = "/products">Go to shop</Link>
+                    </div>
            }
         </div>
     );
