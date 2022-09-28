@@ -11,11 +11,11 @@ const Navbar = () => {
     //only state needed here
     const { state } = useContext(CartContext);
     return (
-        <div className={styles.mainContainer}>
-            <div className={styles.container}>
-                <Link to="/products">Products</Link>
-                <div>
-                    <Link to="/Cart"><img src={shopIcon} alt="shop icon"/></Link>
+        <div className ={styles.mainContainer}>
+            <div className ={styles.container}>
+                <Link to="/products" className ={styles.productLink}>Products</Link>
+                <div className={styles.iconContainer}>
+                    <Link to="/cart"><img src={shopIcon} alt="shop icon"/></Link>
                     <span>{state.itemsCounter}</span>
                 </div>
             </div>
