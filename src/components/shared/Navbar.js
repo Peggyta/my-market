@@ -13,7 +13,7 @@ const Navbar = () => {
             <div>
                 <Link to="/products">Products</Link>
                 <div>
-                    <Link to="/cart"><img src={shopIcon} alt="shop icon"/></Link>
+                    <Link to="/Cart"><img src={shopIcon} alt="shop icon"/></Link>
                     <span>{state.itemsCounter}</span>
                 </div>
             </div>
