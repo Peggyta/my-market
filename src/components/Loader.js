@@ -1,11 +1,12 @@
 import React from 'react';
-import spinner from '../assets/icons/Loading.gif';
+import styles from '../components/Loader.module.css';
+import loadingGif from '../assets/icons/loading.gif';
 
 const Loader = () => {
     return (
-        <div>
-            <img src = { spinner } alt="loading"/>
-            <h1>Loading ...</h1>
+        <div className={styles.container}>
+            <img src={loadingGif} alt="loader" />
+                <h1>Loading ...</h1>
         </div>
     );
 };

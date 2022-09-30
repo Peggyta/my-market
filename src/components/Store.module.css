@@ -8,6 +8,10 @@
     
 }
 
+.loadingContainer {
+    text-align: center;
+}
+
 @media (max-width: 1200px) {
     .container {
         padding: 15px 80px;
