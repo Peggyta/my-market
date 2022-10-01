@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContextProvider';
 //Components
 import Cart from './shared/Cart';
+//Style
+import styles from '../components/ShopCart.module.css';
 
 const ShopCart = () => {
     const{ state, dispatch } = useContext(CartContext);
     return (
-        <div>
-           <div>
+        <div className={styles.container}>
+           <div className={styles.cartContainer}>
                 {state.selectedItems.map(item => <Cart key = {item.id} data = {item} />)}
            </div>
            {
