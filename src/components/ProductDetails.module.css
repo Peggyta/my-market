@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 150px 50px;
+    padding: 20px;
+    background-color: #89654b;
+    border: 2px outset #92613c;
+    border-radius: 7px;
+}
+
+.image {
+    width: 400px;
+    border-radius: 7px;
+}
+
+.titleContainer {
+    padding: 20px;
+    background-color: #ece6c2;
+    border-radius: 10px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.titleContainer h3 {
+    color: #2c715e;
+    margin: 20px 0 30px;
+}
+
+.description {
+    color: rgb(57, 42, 32);
+    margin-bottom: 30px;
+}
+
+.category {
+  color: rgb(77, 57, 43);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.category span {
+    color: #bb532d;
+    font-size: 1rem;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonContainer a {
+    text-decoration: none;
+    display: inline-block;
+    background: #bb532d;
+    padding: 7px 15px;
+    color: #ece6c2;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+    box-shadow: rgba(29, 20, 1, 0.07) 0px 1px 1px, rgba(52, 28, 3, 0.07) 0px 2px 2px,
+      rgba(54, 40, 1, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+      rgba(60, 31, 3, 0.07) 0px 9px 10px;
+  }
+
+  .buttonContainer a:hover {
+    background-color: #2c715e;
+  }
+
+.price {
+    display: inline-block;
+    background: #2c715e;
+    padding: 7px 16px;
+    color: #ece6c2;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: rgba(29, 20, 1, 0.07) 0px 1px 1px, rgba(52, 28, 3, 0.07) 0px 2px 2px,
+      rgba(54, 40, 1, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+      rgba(60, 31, 3, 0.07) 0px 9px 10px;
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      margin: 120px 80px 50px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+      }
+      .image {
+        width: 170px;
+        margin-bottom: 50px;
+      }
+      .titleContainer {
+        margin: 0;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        margin: 120px 40px 50px;
+        justify-content: center;
+      }
+      .titleContainer {
+        margin: 0;
+      }
+  }
+
+  @media (max-width: 555px) {
+    .container {
+        margin: 120px 20px 50px;
+        justify-content: center;
+      }
+      .titleContainer {
+        margin: 0;
+      }
+  }
+
+  @media (max-width: 370px) {
+    .buttonContainer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .price {
+      margin-bottom: 40px;
+    }
+  }
