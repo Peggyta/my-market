@@ -1,10 +1,10 @@
 .container {
     width: 250px;
-    background-color: #fff;
+    background-color: rgb(199, 176, 127);
     text-align: center;
     margin: 0 10px 50px;
     overflow: hidden;
-    border: 1px ridge #d2a24c;
+    border: 1px ridge #988259;
     border-radius: 10px;
     transition: all 0.2s ease;
 }
@@ -19,17 +19,18 @@
     padding: 10px;
     width: 200px;
     height: 200px;
+    border-radius: 15px;
   }
 
   .container h3 {
-    color: #6f5643;
+    color: #594536;
     text-align: left;
     margin: 20px 20px 15px;
     font-size: 1.1rem;
   }
 
   .container p {
-    color: #6f5643;
+    color: #594636;
     text-align: left;
     margin: 15px 20px;
     font-size: 0.9rem;
@@ -45,13 +46,17 @@
 
   .linkContainer a {
     text-decoration: none;
-    color: #4b8f7c;
+    color: #0c664d;
     font-size: 0.95rem;
+    font-weight: 500;
   }
 
+  .linkContainer a:hover {
+    color: #6f5643;
+  }
   .buttonContainer button {
     border-radius: 5px;
-    background-color: #cc6b49;
+    background-color: #a25336;
     color: #ece6c2;
     border: none;
     width: 100px;
@@ -59,8 +64,8 @@
     cursor: pointer;
     transition: all .2s ease;
     font-size: 0.9rem;
-    margin-left: 5px;
     font-weight: 500;
+    margin-left: 5px;
     box-shadow: rgba(93, 87, 50, 0.25) 0px 4px 12px -2px,
     rgba(121, 94, 6, 0.3) 0px 3px 7px -3px;
   }
@@ -78,7 +83,7 @@
   }
 
   .buttonContainer button:hover {
-    background-color: #4b8f7c;
+    background-color: #0c664d;
   }
 
   .counter {
