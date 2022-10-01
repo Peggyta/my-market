@@ -16,19 +16,19 @@ const ShopCart = () => {
            </div>
            {
                 state.itemsCounter > 0 && 
-                <div>
-                    <p><span>Total Items:</span>{state.itemsCounter}</p>
-                    <p><span>Total Payments:</span>{state.total} $</p>
-                    <div>
-                        <button onClick ={() => dispatch({type: "CLEAR"})}>Clear</button>
-                        <button onClick ={() => dispatch({type: "CHECKOUT"})}>Checkout</button>
+                <div className={styles.payments}>
+                    <p><span>Total Items:</span> {state.itemsCounter}</p>
+                    <p><span>Total Payments:</span> {state.total} $</p>
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.clear} onClick ={() => dispatch({type: "CLEAR"})}>Clear</button>
+                        <button className={styles.checkout} onClick ={() => dispatch({type: "CHECKOUT"})}>Checkout</button>
                     </div>
                 </div>
            }
 
            {
                 state.checkout && 
-                    <div>
+                    <div className={styles.complete}>
                         <h3>Checked out successfully!</h3>
                         <Link to = "/products">Buy more</Link>
                     </div>
@@ -36,7 +36,7 @@ const ShopCart = () => {
 
            {
                 !state.checkout && state.itemsCounter === 0 && 
-                    <div>
+                    <div className={styles.complete}>
                         <h3>Want to buy?</h3>
                         <Link to = "/products">Go to shop</Link>
                     </div>
